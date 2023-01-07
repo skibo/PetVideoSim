@@ -29,6 +29,7 @@
 #
 #    "./PetVideoSim.srcs/sim_1/ttllib.v"
 #    "./PetVideoSim.srcs/sim_1/pet2001vid.v"
+#    "./PetVideoSim.srcs/sim_1/dynamicpet.v"
 #    "./PetVideoSim.srcs/sim_1/charrom.mem"
 #
 #*****************************************************************************************
@@ -39,6 +40,7 @@ proc checkRequiredFiles { origin_dir} {
   set files [list \
  "[file normalize "$origin_dir/PetVideoSim.srcs/sim_1/ttllib.v"]"\
  "[file normalize "$origin_dir/PetVideoSim.srcs/sim_1/pet2001vid.v"]"\
+ "[file normalize "$origin_dir/PetVideoSim.srcs/sim_1/dynamicpet.v"]"\
  "[file normalize "$origin_dir/PetVideoSim.srcs/sim_1/charrom.mem"]"\
   ]
   foreach ifile $files {
@@ -187,6 +189,7 @@ set obj [get_filesets sim_1]
 set files [list \
  [file normalize "${origin_dir}/PetVideoSim.srcs/sim_1/ttllib.v"] \
  [file normalize "${origin_dir}/PetVideoSim.srcs/sim_1/pet2001vid.v"] \
+ [file normalize "${origin_dir}/PetVideoSim.srcs/sim_1/dynamicpet.v"] \
  [file normalize "${origin_dir}/PetVideoSim.srcs/sim_1/charrom.mem"] \
 ]
 add_files -norecurse -fileset $obj $files
@@ -204,6 +207,7 @@ set_property -name "file_type" -value "Memory File" -objects $file_obj
 # Set 'sim_1' fileset properties
 set obj [get_filesets sim_1]
 set_property -name "top" -value "pet2001vid" -objects $obj
+set_property -name "top_auto_set" -value "0" -objects $obj
 set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
 
 # Set 'utils_1' fileset object
