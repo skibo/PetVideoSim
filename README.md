@@ -11,17 +11,12 @@ machine, cd to the top directory and type "make project".  Then in Vivado, open 
 (top)/PetVideoSim/PetVideoSim.xpr.  There are two top simulations:  pet2001vid and dynamicpet.
 You choose which one to run in the Simulation Settings menu.
 
-Because Vivado is a large, unwieldy piece of software most people don't want to install or use, I will make an
-attempt to create VCD files of both simulations and make them available somewhere (and I will update
-this README with their location).
-VCD files can be viewed using GtkWave which is an open source waveform viewer (See https://gtkwave.sourceforge.net/).
+Because Vivado is a large, unwieldy piece of software most people don't want to install or use, I have created
+VCD files of both simulations and made them available as binary releases.  Open the latest release in the
+Releases side-bar to the right and download the compressed VCD files.  Decompress the files with gunzip.
+(They decompress to very large files: 45MB and 15MB.)
+View the VCD files using gtkwave which is an open source waveform viewer (See https://gtkwave.sourceforge.net/).
 It's available on Linux by installing package "gtkwave".
-
-For now, I have a VCD file on Google Drive:
-
-https://drive.google.com/file/d/12FR8pZxCnjmvW9VoOwyYSXcHFgqAeEUd/view?usp=sharing
-
-Download this and uncompress it with "gunzip".  View with gtkwave.  THIS FILE LOCATION WILL PROBABLY CHANGE!
 
 -Thomas Skibo
 
